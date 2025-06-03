@@ -20,23 +20,25 @@ public class PostRepositoryImpl implements PostRepository{
         lastId.set(0l);
     }
 
+    @Override
     public List<Post> all() {
         if (repo.values().size() == 0) return Collections.emptyList();
         return new ArrayList<>(repo.values());
     }
 
+    @Override
     public Optional<Post> getById(long id) {
         Optional<Post> result = Optional.ofNullable(repo.get(id));
         return result;
     }
-
+    @Override
     public Post save(Post post) {
         long id = (post.getId() == 0) ? lastId.incrementAndGet() : post.getId();
         post.setId(id);
         repo.put(id, post);
         return post;
     }
-
+    @Override
     public void removeById(long id) {
         if (getById(id).isEmpty()) {
             throw new NotFoundException();
