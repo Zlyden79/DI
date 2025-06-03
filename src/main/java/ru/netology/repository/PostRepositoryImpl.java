@@ -1,5 +1,7 @@
 package ru.netology.repository;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
 
@@ -7,13 +9,14 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Repository
 public class PostRepositoryImpl implements PostRepository{
     // храним в мапе для быстрого поиска, key = Post.getId();
     private final Map<Long, Post> repo;
     //сюда запоминаем последний id для постов
     private volatile AtomicLong lastId;
 
-
+    @Autowired
     public PostRepositoryImpl() {
         this.repo = new ConcurrentHashMap<>();
         this.lastId = new AtomicLong();

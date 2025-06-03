@@ -2,5 +2,6 @@ C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\controller\Post
 C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\exception\NotFoundException.java
 C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\model\Post.java
 C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\repository\PostRepository.java
+C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\repository\PostRepositoryImpl.java
 C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\service\PostService.java
 C:\Users\Zlyden'\IdeaProjects\servlets\src\main\java\ru\netology\servlet\MainServlet.java
